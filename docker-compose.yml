@@ -1,0 +1,15 @@
+services:
+  rust-start-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rust-start-app
+    ports:
+      - "${BACKEND_PORT:-8080}:8080"
+    volumes:
+      - .:/usr/src/app
+    environment:
+      - TZ=Asia/Tokyo
+      - RUST_BACKTRACE=1
+    tty: true
+    stdin_open: true
