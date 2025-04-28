@@ -43,4 +43,4 @@ cargo run --bin section3
 
 ## 📄 ライセンス
 
-MIT License
+AGPL-3.0 license
