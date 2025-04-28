@@ -152,16 +152,16 @@ pub fn main() {
     println!("Option型について");
     println!("データが存在する場合としない場合を表現できる列挙型");
     let mut some_number = Some(5);
-    println!("Option型のインスタンスを作成：{}", some_number.unwrap());
+    println!("Option型のインスタンスを作成：{}", some_number.unwrap_or(0));
     some_number = None;
-    println!("Option型のインスタンスを作成：{}", some_number.unwrap());
+    println!("Option型のインスタンスを作成：{}", some_number.unwrap_or(0));
 
     println!("Result型について");
     println!("処理結果が成功か、エラーかを表現できる列挙型");
     let mut result = Result::Ok(5);
-    println!("Result型のインスタンスを作成：{}", result.unwrap());
+    println!("Result型のインスタンスを作成：{}", result.unwrap_or(0));
     result = Result::Err(String::from("エラー"));
-    println!("Result型のインスタンスを作成：{}", result.unwrap());
+    println!("Result型のインスタンスを作成：{}", result.unwrap_or(0));
 
     println!("const型について");
     println!("定数を定義する型");
